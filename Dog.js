@@ -1,4 +1,9 @@
+import chalk from 'chalk'
+import { prototype } from 'events'
+const log = console.log
+
 function Dog() {
+  this.name = 'Bob'
   this.stomach = []
   this.lung = ['oxygen', 'CO2']
   this.dead = false
@@ -19,4 +24,8 @@ Dog.prototype.die = () => {
 
 Dog.prototype.entertain = favorite => {
   this.favorite.push(favorite)
+}
+
+Dog.prototype.sayHi = () => {
+  log('Hi! Im a ' + chalk.blue(this.name))
 }
