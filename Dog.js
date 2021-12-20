@@ -1,6 +1,8 @@
 function Dog() {
   this.stomach = []
+  this.lung = ['oxygen', 'CO2']
   this.dead = false
+  this.favorite = []
 }
 
 Dog.prototype.eat = (cat) => {
@@ -13,4 +15,8 @@ Dog.prototype.sick = (virus) => {
 
 Dog.prototype.die = () => {
   this.dead = true
+}
+
+Dog.prototype.entertain = favorite => {
+  this.favorite.push(favorite)
 }
